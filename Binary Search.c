@@ -40,6 +40,5 @@ void main()
   {
     printf("Element is not present in array");
   }
-
 }
  
