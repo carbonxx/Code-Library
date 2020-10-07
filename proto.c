@@ -1,8 +1,8 @@
-//Assignment 1
+//This is a simple code for understanding data types
 #include <stdio.h>
 int main()
 {
-    int test = 5;
+    int test = 5; //dataype used for numbers
     printf("Number = %d \n", test);
      
     float number1 = 13.5;
@@ -19,7 +19,7 @@ int main()
     scanf("%d", &testint);  
     printf("Number = %d \n",testint);
     
-    float num1;
+    float num1;  //datatype used for floating values
     double num2;
 
     printf("Enter a number: ");
@@ -30,7 +30,7 @@ int main()
     printf("num1 = %f \n", num1);
     printf("num2 = %lf \n", num2);
 
-    char a;
+    char a;  //datatype used for characters
     printf("Enter a character: ");
     scanf(" %c", &a);     
     printf("You entered %c.\n",a);  
