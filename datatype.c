@@ -5,17 +5,7 @@ int main()
     int test = 5; //dataype used for numbers
     printf("Number = %d \n", test);
      
-    float num1;  //datatype used for floating values
-    double num2;
 
-    printf("Enter a number: ");
-    scanf("%f", &num1);
-    printf("Enter another number: ");
-    scanf("%lf", &num2);
-
-    printf("num1 = %f \n", num1);
-    printf("num2 = %lf \n", num2);
-     
     float number1 = 13.5;
     double number2 = 12.4;
 
@@ -29,7 +19,7 @@ int main()
     printf("Enter an integer: ");
     scanf("%d", &testint);  
     printf("Number = %d \n",testint);
-    
+
     char a;  //datatype used for characters
     printf("Enter a character: ");
     scanf(" %c", &a);     
