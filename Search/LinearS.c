@@ -1,27 +1,32 @@
 //Linear Search
 #include<stdio.h>
-  
-int main()
+void main()
 {
-    int a[20],i,x,n;
-    printf("How many elements?");
-    scanf("%d",&n);
-     
-    printf("Enter array elements:n");
-    for(i=0;i<n;++i)
-        scanf("%d",&a[i]);
-     
-    printf("nEnter element to search:");
-    scanf("%d",&x);
-     
-    for(i=0;i<n;++i)
-        if(a[i]==x)
-            break;
-     
-    if(i<n)
-        printf("Element found at index %d",i);
-    else
-        printf("Element not found");
-  
-    return 0;
+    int a[50],n,i,key,count=0;
+    printf("Enter the amount of  vlaues (max=50) :");
+    scanf("%d", &n);
+    printf("Input the values (separated by space) :");
+   for (i = 0; i <n; ++i) 
+   {
+    scanf("%d", &a[i]);  
+   }
+    printf("Enter the element to be searched :");
+    scanf("%d",&key);
+   for ( i = 0; i <n; i++)
+   {
+     if(key==a[i])
+    {
+        count=1;   
+        break;
+    }
+   }
+    if(count==1)
+  {
+    printf("Element is present at index %d",i );
+  }
+   else
+  {
+    printf("Element is not present in array");
+  }
+
 }
