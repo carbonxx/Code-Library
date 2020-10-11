@@ -1,4 +1,6 @@
-These are basic set of programs which are required for the first years. </br> 
+<h1 align="center">C Program</h1>
+## This repository is collection of main concepts of C Programming Language. </br> 
+---------------------------
 Hope it would help. </br>
 "Knowledge is Power." - Francis Bacon
                 
