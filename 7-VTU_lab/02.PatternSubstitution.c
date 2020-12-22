@@ -10,56 +10,44 @@ Support the program with functions for each of the above operations. Don't
 use Built-in functions.
 */
 #include<stdio.h>
-int m,n,i,j,k,flag;
-char str[100],pat[50],rep[50],b[150];
+char s[20],pat[20],rep[20],ans[30];
+int i,j,k,l,flag;
 void pmatch()
 {
- while(str[n]!='\0')
- {
-     if(str[m]==pat[i])
-    { 
-       m++;
-       i++;
-      if(pat[i]=='\0')
-      {
-        flag=1;
-        for(k=0;rep[k]!='\0';k++)
-        {
-          b[j]=rep[k];
-          j++;
-          n=m;
-          i=0; 
-        }
-      }
+for(i=0,k=0;s[i]!='\0';i++)
+  {
+    flag=1;
+    for(j=0;pat[j]!='\0';j++)
+    {  
+      if(s[i+j]!=pat[j])
+       { 
+         flag=0;
+       }
     }
-    else
-   {
-    b[j]=str[n];
-    j++;
-    n++;
-    m=n;
-    i=0;
-   }
- }
-  b[j]='\0';
-}
-void main()
-{
-   printf("Enter the string : ");
-   gets(str);
-   printf("Enter the pattern string : ");
-   gets(pat);
-   printf("Enter the replacing string : ");
-   gets(rep);
-   pmatch();
-   if(flag==1)
-   {
-    printf("The new string : ");
-    puts(b);
+    l=j;
+    if(flag)
+    {
+      for(j=0;rep[j]!='\0';j++,k++)
+      {
+        ans[k]=rep[j];
+      }
+      i+=l-1;
     }
     else
     {
-     printf("The pattern is not found\n");
-     
+      ans[k++]=s[i];
     }
+  }
+  ans[k]='\0';
+  printf("%s",ans);
+}
+void main()
+{
+ printf("Enter string: ");
+  scanf("%s",s);
+  printf("Enter pattern: ");
+  scanf("%s",pat);
+  printf("Enter replacement: ");
+  scanf("%s",rep);
+  pmatch();
 }
