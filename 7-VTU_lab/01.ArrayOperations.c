@@ -21,7 +21,9 @@ void create()
 	scanf("%d",&size);
 	printf("Enter the %d elements : ",size);
 	for(i=0 ; i<size ; i++)
-	scanf("%d",&array[i]);
+	{
+	  scanf("%d",&array[i]);
+	}
 	printf("The array is created sucessfully \n");
 
 }
@@ -30,7 +32,7 @@ void display()
 
 	printf("The array elements\n");
 	for(i=0 ; i<size ; i++)
-	printf("%d\n",array[i]);
+	printf("%d\t",array[i]);
 }
 void insert()
 {
@@ -60,7 +62,9 @@ void del()
 	{
 	element=array[pos];
 	for(i=pos ; i<size ; i++)
+	{
 	array[i]=array[i+1];
+	} 
     size--;
     printf("deleted element is %d \n",element);
     }
@@ -83,7 +87,8 @@ void main()
 		case 2 : insert(); break;
 		case 3 : display(); break;
 		case 4 : del(); break;
-		case 6 : exit(0);
+		case 5 : exit(0);
+		default: printf("!!Invalid Choice!!");
     }
 	}
 }

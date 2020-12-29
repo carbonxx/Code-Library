@@ -39,11 +39,11 @@ for(i=0,k=0;s[i]!='\0';i++)
     }
   }
   ans[k]='\0';
-  printf("%s",ans);
+  printf("Result : %s",ans);
 }
 void main()
 {
- printf("Enter string: ");
+  printf("Enter string: ");
   scanf("%s",s);
   printf("Enter pattern: ");
   scanf("%s",pat);
