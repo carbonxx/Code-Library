@@ -1,4 +1,3 @@
-
 /*
 3 Design, Develop and Implement a menu driven Program in C for the
 following operations on STACK of Integers (Array Implementation of Stack
@@ -32,12 +31,11 @@ void palindrome();
 void main ()
 {
     int choice;
-    int option = 1;
     s.top = -1;
  
-   while (option)
+   while (1)
     {
-       printf (" --------STACK OPERATION------- \n");
+        printf (" --------STACK OPERATION------- \n");
         printf (" |    1   :   PUSH            | \n");
         printf (" |    2   :   POP             | \n");
         printf (" |    3   :   DISPLAY         | \n");
