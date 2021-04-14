@@ -1,0 +1,98 @@
+/*11. Design, Develop and Implement a Program in C for the following
+operations on Graph(G) of Cities
+a. Create a Graph of N cities using Adjacency Matrix.
+b. Print all the nodes reachable from a given starting node in a digraph using
+DFS/BFS method*/
+
+#include<stdio.h>
+#include<stdlib.h>
+int st[10],top=-1,v[10],a[10][10],u[10];
+int n,q[10],front=0;
+int rear=-1;
+void dfs(int s)
+{
+	int i;
+	v[s]=1;
+	st[++top]=s;
+	for(i=1;i<=n;i++)
+	{
+		if(a[s][i]==1&&v[i]==0)
+		{
+			printf("%d->%d\n",s,i);
+            dfs(i);
+		}
+	}
+}
+void bfs(int s)
+{
+	int m,i;
+	u[s]=1;
+	q[++rear]=s;
+	printf("Nodes reachable from %d are\n",s);
+	while(front<=rear)
+	{
+		m=q[front++];
+		for(i=1;i<=n;i++)
+		{
+			if(a[m][i]==1&&u[i]==0)
+			{
+				q[++rear]=i;
+				printf("%d\n",i);
+				u[i]=1;
+			}
+		}
+	}
+}
+
+void main()	
+{
+	int s,i,j,ch;
+	while(1)
+	{
+		printf("1.create\n2.DFS\n3.BFS\n4.Exit\n");
+		printf("Enter your choice\n");
+		scanf("%d",&ch);
+		switch(ch)
+		{
+			case 1:	printf("Enter the number of vertices\n");
+					scanf("%d",&n);
+					printf("Enter the adjacency matrix representation\n");
+					for(i=1;i<=n;i++)
+					{
+						for(j=1;j<=n;j++)
+						{
+							scanf("%d",&a[i][j]);
+						}
+					}
+					break;
+			case 2:printf("print reachable nodes using BFS method\n");
+					printf("enter source\n");
+					scanf("%d",&s);
+					printf("Nodes reachable from %d\n",s);
+					bfs(s);
+					for(i=1;i<=n;i++)
+					{
+						if(v[i]==0)
+						{
+					
+                            printf("%d is not visited and it is   disconnected graph\n",i);
+						}
+					}
+					break;
+			case 3:	printf("print reachable nodes using DFS method\n");
+					printf("enter source\n");
+					scanf("%d",&s);
+					dfs(s);
+					for(i=1;i<=n;i++)
+					{
+						if(u[i]==0)
+						{
+					        printf("%d is not visited and it is disconnected graph\n",i);
+						}
+					}
+					break;
+			case 4:exit(0);
+			default: printf("Invalid choice\n");
+		}
+	}
+}
