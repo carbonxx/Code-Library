@@ -1,4 +1,4 @@
-# Computer Science
+# Code-Library
 
 ## Table of Contents
 
