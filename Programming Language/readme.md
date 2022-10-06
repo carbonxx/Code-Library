@@ -15,7 +15,7 @@ getch();
 }
 ```
 
-At this stage, you might not be able to understand in-depth how this code prints something on the screen. The main() is a standard function that you will always include in any program that you are going to create from now onwards. Note that the execution of the program starts from the main() function. The clrscr() function is used to see only the current output on the screen while the printf() function helps us to print the desired output on the screen. Also, getch() is a function that accepts any character input from the keyboard. In simple words, we need to press any key to continue(some people may say that getch() helps in holding the screen to see the output).
+The main() is a standard function that you will always include in any program that you are going to create from now onwards. Note that the execution of the program starts from the main() function. The clrscr() function is used to see only the current output on the screen while the printf() function helps us to print the desired output on the screen. Also, getch() is a function that accepts any character input from the keyboard. In simple words, we need to press any key to continue(some people may say that getch() helps in holding the screen to see the output).
 Between high-level language and machine language, there are assembly languages also called symbolic machine code. Assembly languages are particularly computer architecture specific. Utility program (Assembler) is used to convert assembly code into executable machine code. High Level Programming Language is portable but requires Interpretation or compiling to convert it into a machine language that is computer understood.
 Hierarchy of Computer language –
 
@@ -104,13 +104,13 @@ JavaScript
 
 ### Characteristics of a programming Language –
 
-A programming language must be simple, easy to learn and use, have good readability, and be human recognizable.
-Abstraction is a must-have Characteristics for a programming language in which the ability to define the complex structure and then its degree of usability comes.
-A portable programming language is always preferred.
-Programming language’s efficiency must be high so that it can be easily converted into a machine code and executed consumes little space in memory.
-A programming language should be well structured and documented so that it is suitable for application development.
-Necessary tools for the development, debugging, testing, maintenance of a program must be provided by a programming language.
-A programming language should provide a single environment known as Integrated Development Environment(IDE).
-A programming language must be consistent in terms of syntax and semantics.
-Basic Example Of Most Popular Programming Languages:
-Here the basic code for addition of two numbers are given in some popular languages (like C, C++,Java, Python, C#, JavaScript etc.).
+- A programming language must be simple, easy to learn and use, have good readability, and be human recognizable.
+- Abstraction is a must-have Characteristics for a programming language in which the ability to define the complex structure and then its degree of usability comes.
+- A portable programming language is always preferred.
+- Programming language’s efficiency must be high so that it can be easily converted into a machine code and executed consumes little space in memory.
+- A programming language should be well structured and documented so that it is suitable for application development.
+- Necessary tools for the development, debugging, testing, maintenance of a program must be provided by a programming language.
+- A programming language should provide a single environment known as Integrated Development Environment(IDE).
+- A programming language must be consistent in terms of syntax and semantics.
+- Basic Example Of Most Popular Programming Languages:
+- Here the basic code for addition of two numbers are given in some popular languages (like C, C++,Java, Python, C#, JavaScript etc.).
