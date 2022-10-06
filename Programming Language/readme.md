@@ -90,17 +90,17 @@ Assembly,
 
 ### Most Popular Programming Languages –
 
-C
-Python
-C++
-Java
-SCALA
-C#
-R
-Ruby
-Go
-Swift
-JavaScript
+C,
+Python,
+C++,
+Java,
+SCALA,
+C#,
+R,
+Ruby,
+Go,
+Swift,
+JavaScript,
 
 ### Characteristics of a programming Language –
 
