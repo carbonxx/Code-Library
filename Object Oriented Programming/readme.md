@@ -60,6 +60,88 @@ In case an object which has String data type members in it calls this class, the
 
 Polymorphism eliminates the possibilities of rewriting almost the same code many times over differently for different objects.
 
+There are two types of polymorphism:
+
+	1. compile-time polymorphism / static polymorphism
+	2. run-time polymorphism / dynamic polymorphism
+
+* **Static Polymorphism :** This type of polymorphism is achieved by method overloading or operator overloading.
+Method overloading can be explained by this example where the add method is overloaded by change in the number of arguments or a change in 
+the type of arguments.
+
+Eg:
+```
+class Operations{
+	static int add(int a,int b){
+		return a+b;
+	}
+
+	static int(int a,int b,int c){
+		return a+b+c;
+	}
+}
+
+class Main{
+	public static void main(Strings[] args){
+		System.out.println(Operations.add(5,3));
+		System.out.println(Operations.add(10,3,5));
+	}
+}
+
+```
+
+Output:
+
+8
+
+18
+
+* **Dynamic Polymorphism :**
+It is also known as Dynamic Method Dispatch. It is a process in which a function call to the overridden method is resolved at Runtime. 
+This type of polymorphism is achieved by Method Overriding. Method overriding, on the other hand, occurs when a derived class has a definition 
+for one of the member functions of the base class. That base function is said to be overridden.
+
+Eg:
+```
+class Parent{
+	void display(){
+		System.out.println("This is parent class");
+	}
+}
+
+class child1 extends Parent{
+	void display(){
+		System.out.println("This is child1 class");
+	}
+}
+
+class child2 extends Parent{
+	void display(){
+		System.out.println("This is child2 class");
+	}
+}
+
+class Main{
+	public static void main(String[] args){
+		Parent p1 = new Parent();
+		p1.display();
+
+		Parent c1 = new child1();
+		c1.display();
+	}
+}
+```
+
+Output:
+
+This is parent class
+
+This is child1 class
+
+Output Explaination:
+When an object of child class is created, then the method inside the child class is called. This is because The method in the parent class is overridden by the child class. Since The method is overridden, This method has more priority than the parent method inside the child class. So, the body inside the child class is executed.
+
+
 <br>
 
 **Hence, these four concepts of OOP helps in writing better modular and efficient codes.** 
