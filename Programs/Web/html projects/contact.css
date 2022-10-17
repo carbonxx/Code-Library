@@ -1,0 +1,71 @@
+ul {
+    list-style-type: none;
+    margin-top: 0%;
+    /* margin-bottom: 100%; */
+    padding: 0.5%;
+    overflow: hidden;
+    background-color: #6F4E37;
+}
+
+ul {
+    display: flex;
+    gap: 23%;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li :hover {
+    background-color: #654321;
+
+}
+
+body {
+    background-color: #FFF8DC;
+    background-image: url("coffee images/background img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(80%) contrast(100%) opacity(80%);
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: white;
+}
+h2 {
+    color: azure;
+}
+form{
+    color: #FFF8DC;
+    align-items: center;
+    margin-left: 15%;
+}
+p{
+    color: white;
+}
+.copyright{
+    display: flex;
+    gap: 50%;
+}
+h3{
+    color: white;
+}
+.logo-and-heading {
+    display: flex;
+    gap: 21%;
+}
+
+.heading {
+    border: 1px solid cornsilk;
+    width: max-content;
+    padding: 0.25em 1em;
+    border-radius: 100vw;
+    background-color: #654321;
+}
