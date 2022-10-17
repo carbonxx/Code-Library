@@ -30,7 +30,6 @@ int main()
 {
     int N = 10;
 
-    // check for the every number from 1 to N
     for (int i = 1; i <= N; i++)
     {
 
