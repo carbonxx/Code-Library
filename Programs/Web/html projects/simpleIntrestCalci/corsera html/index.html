@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="work.js" defer></script>
+  </head>
+  <body>
+    <h1>Simple Intrest Calcuator</h1>
+    <div class="container">
+      <label for="amount">Amount</label>
+      <input type="text" name="amount" id="amount" />
+      <br />
+      <br />
+      <label for="i.r">Intrest Rate</label>
+      <input
+        type="range"
+        value="15"
+        min="0"
+        max="50"
+        id="intrest-rate"
+        oninput="this.nextElementSibling.value = this.value"
+      />
+      <output>15</output>
+      <br />
+      <br />
+      <label for="years">No. of Years</label>
+      <select name="years" id="years">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        <option value="25">25</option>
+      </select>
+      <br />
+      <br />
+      <button type="button" id="calculate">Compute Intrest</button>
+      <br /><br />
+      <div id="result"></div>
+      <p>&copy;Everyone can get rich</p>
+      <p>This calculator belongs to Adithya Nayak</p>
+    </div>
+  </body>
+</html>

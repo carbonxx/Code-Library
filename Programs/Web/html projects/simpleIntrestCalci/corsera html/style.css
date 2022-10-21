@@ -1,0 +1,18 @@
+h1{
+    color: grey;
+    text-align: center;
+}
+    div{
+    border: 25%;
+    margin-left: 2em;
+
+    background-color: white;
+}
+.container {
+    margin-top: 5%;
+        margin-bottom: 25%;
+        margin-left: 38%;
+}
+button{
+    align-items: center;
+} 
