@@ -7,7 +7,7 @@ def search(arr, x):
   return -1
     
     
-arr[] = {1,12,15,27,32,54,99,108,120,157,176}
+arr = [1,12,15,27,32,54,99,108,120,157,176]
 x = int(input("Enter the number you want to search: "))
 
 if search(arr,x) != -1:
