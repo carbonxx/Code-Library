@@ -307,4 +307,3 @@ int[] array = new int[10]
 }
 }
 ```
-#hi
