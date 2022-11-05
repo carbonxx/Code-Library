@@ -1,23 +1,26 @@
 # Selection Sort
+
 Selection Sort is a sorting algorithm, specifically an in-place comparison sort. It has O(n2) time complexity, making it inefficient on large lists, and generally performs worse than the similar insertion sort. Selection sort is noted for its simplicity, and it has performance advantages over more complicated algorithms in certain situations, particularly where auxiliary memory is limited.
 
 ## Complexity
+
 | Best | Average | Worst | Memory | Stable |
-|------|---------|-------|--------|--------|
+| ---- | ------- | ----- | ------ | ------ |
 | n^2  | n^2     | n^2   | 1      | No     |
 
 ## Sudo Code
+
 ```
 procedure selectionSort( A : list of sortable items )
     n = length(A)
     for i = 1 to n - 1
         /* set current element as minimum*/
-        min = i    
-        /* check the element to be minimum */         
-        for j = i+1 to n 
+        min = i
+        /* check the element to be minimum */
+        for j = i+1 to n
             if A[j] < A[min] then
                 min = j;
-        /* swap the minimum element with the current element*/         
+        /* swap the minimum element with the current element*/
         if indexMin != i  then
             swap A[i] and A[min]
 end procedure
@@ -26,27 +29,29 @@ procedure selectionSortDesc( A : list of sortable items )
     n = length(A)
     for i = 1 to n - 1
         /* set current element as maximum*/
-        max = i    
-        /* check the element to be maximum */         
-        for j = i+1 to n 
+        max = i
+        /* check the element to be maximum */
+        for j = i+1 to n
             if A[j] > A[max] then
                 max = j;
-        /* swap the maximum element with the current element*/         
+        /* swap the maximum element with the current element*/
         if indexMax != i  then
             swap A[i] and A[max]
 end procedure
 ```
 
 ## Implementations
-* [Python](#python)
-* [C++](#cpp)
-* [C](#c)
-* [Java](#java)
-* [JavaScript](#javascript)
-* [Go](#go)
-* [Ruby](#ruby)
+
+- [Python](#python)
+- [C++](#cpp)
+- [C](#c)
+- [Java](#java)
+- [JavaScript](#javascript)
+- [Go](#go)
+- [Ruby](#ruby)
 
 ### Python
+
 ```python
 def selectionSort(arr):
     for i in range(len(arr)):
@@ -80,6 +85,7 @@ print(arr) # [13, 12, 11, 6, 5]
 ```
 
 ### CPP
+
 ```cpp
 #include <iostream>
 using namespace std;
@@ -123,6 +129,7 @@ int main()
 ```
 
 ### Java
+
 ```java
 
 public class SelectionSort {
@@ -159,6 +166,7 @@ public class SelectionSort {
 ```
 
 ### C
+
 ```c
 #include <stdio.h>
 
@@ -215,43 +223,45 @@ int main()
 ```
 
 ### JavaScript
+
 ```js
 function selectionSort(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        let min = i;
-        for (let j = i + 1; j < arr.length; j++) {
-            if (arr[j] < arr[min]) {
-                min = j;
-            }
-        }
-        if (min !== i) {
-            [arr[i], arr[min]] = [arr[min], arr[i]];
-        }
+  for (let i = 0; i < arr.length; i++) {
+    let min = i
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[min]) {
+        min = j
+      }
     }
-    return arr;
+    if (min !== i) {
+      ;[arr[i], arr[min]] = [arr[min], arr[i]]
+    }
+  }
+  return arr
 }
 
 function selectionSortDesc(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        let max = i;
-        for (let j = i + 1; j < arr.length; j++) {
-            if (arr[j] > arr[max]) {
-                max = j;
-            }
-        }
-        if (max !== i) {
-            [arr[i], arr[max]] = [arr[max], arr[i]];
-        }
+  for (let i = 0; i < arr.length; i++) {
+    let max = i
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] > arr[max]) {
+        max = j
+      }
     }
-    return arr;
+    if (max !== i) {
+      ;[arr[i], arr[max]] = [arr[max], arr[i]]
+    }
+  }
+  return arr
 }
 
-const arr = [64, 25, 12, 22, 11];
-console.log(selectionSort(arr)); // [11, 12, 22, 25, 64]
-console.log(selectionSortDesc(arr)); // [64, 25, 22, 12, 11]
+const arr = [64, 25, 12, 22, 11]
+console.log(selectionSort(arr)) // [11, 12, 22, 25, 64]
+console.log(selectionSortDesc(arr)) // [64, 25, 22, 12, 11]
 ```
 
 ### Go
+
 ```go
 package main
 
@@ -295,6 +305,7 @@ func main() {
 ```
 
 ### Ruby
+
 ```ruby
 def selection_sort(arr)
   for i in 0..arr.length-1
@@ -330,5 +341,3 @@ arr = [64, 25, 12, 22, 11]
 p selection_sort(arr) # [11, 12, 22, 25, 64]
 p selection_sort_desc(arr) # [64, 25, 22, 12, 11]
 ```
-#hi
-
