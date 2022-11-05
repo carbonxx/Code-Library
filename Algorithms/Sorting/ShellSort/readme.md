@@ -1,47 +1,42 @@
 # Shell Sort
-
 Shell sort is mainly a variation of Insertion Sort. In insertion sort, we move elements only one position ahead. When an element has to be moved far ahead, many movements are involved. The idea of ShellSort is to allow the exchange of far items. In Shell sort, we make the array h-sorted for a large value of h. We keep reducing the value of h until it becomes 1. An array is said to be h-sorted if all sublists of every h’th element are sorted.
 
 ## Complexity
-
-| Best        | Average     | Worst | Memory | Stable |
-| ----------- | ----------- | ----- | ------ | ------ |
-| Ω(n log(n)) | θ(nlog(n)2) | O(n2) | 1      | No     |
+| Best         | Average | Worst | Memory | Stable |
+|-------------|----------|-------|--------|--------|
+| Ω(n log(n)) |θ(nlog(n)2)|O(n2)|1| No    |
 
 ## Sudo Code
-
 ```Caculate gap size ($gap)
-
+ 
     WHILE $gap is greater than 0
-
+ 
         FOR each element of the list, that is $gap apart
-
+ 
             Extract the current item
-
+ 
             Locate the position to insert
-
+ 
             Insert the item to the position
-
+ 
         END FOR
-
+ 
         Calculate gap size ($gap)
-
+ 
     END WHILE
 
 ```
 
 ## Implementations
-
-- [Python](#python)
-- [C++](#cpp)
-- [C](#c)
-- [Java](#java)
-- [JavaScript](#javascript)
-- [Go](#go)
-- [Ruby](#ruby)
+* [Python](#python)
+* [C++](#cpp)
+* [C](#c)
+* [Java](#java)
+* [JavaScript](#javascript)
+* [Go](#go)
+* [Ruby](#ruby)
 
 ### Python
-
 ```python
 # Python3 program for implementation of Shell Sort
 # Python3 program for implementation of Shell Sort
@@ -49,15 +44,15 @@ Shell sort is mainly a variation of Insertion Sort. In insertion sort, we move e
 def shellSort(arr, n):
 	# code here
 	gap=n//2
-
-
+	
+	
 	while gap>0:
 		j=gap
 		# Check the array in from left to right
 		# Till the last possible index of j
 		while j<n:
 			i=j-gap # This will keep help in maintain gap value
-
+			
 			while i>=0:
 				# If value on right side is already greater than left side value
 				# We don't do swap else we swap
@@ -85,7 +80,6 @@ print("sorted array",arr2)
 ```
 
 ### CPP
-
 ```cpp
 // C++ implementation of Shell Sort
 #include <iostream>
@@ -109,10 +103,10 @@ int shellSort(int arr[], int n)
 
 			// shift earlier gap-sorted elements up until the correct
 			// location for a[i] is found
-			int j;
+			int j;			
 			for (j = i; j >= gap && arr[j - gap] > temp; j -= gap)
 				arr[j] = arr[j - gap];
-
+			
 			// put temp (the original a[i]) in its correct location
 			arr[j] = temp;
 		}
@@ -145,7 +139,6 @@ int main()
 ```
 
 ### Java
-
 ```java
 // Java implementation of ShellSort
 class ShellSort
@@ -210,47 +203,46 @@ class ShellSort
 ```
 
 ### JavaScript
-
 ```javascript
 // JavaScript implementation of ShellSort
 
 /* function to sort arr using shellSort */
 function sort(arr) {
-  let n = arr.length
+	let n = arr.length
 
-  // Start with a big gap, then reduce the gap
-  for (let gap = Math.floor(n / 2); gap > 0; gap = Math.floor(gap / 2)) {
-    // Do a gapped insertion sort for this gap size.
-    // The first gap elements a[0..gap-1] are already
-    // in gapped order keep adding one more element
-    // until the entire array is gap sorted
-    for (let i = gap; i < n; i += 1) {
-      // add a[i] to the elements that have been gap
-      // sorted save a[i] in temp and make a hole at
-      // position i
-      let temp = arr[i]
+	// Start with a big gap, then reduce the gap
+	for (let gap = Math.floor(n / 2); gap > 0; gap = Math.floor(gap / 2)) {
+		// Do a gapped insertion sort for this gap size.
+		// The first gap elements a[0..gap-1] are already
+		// in gapped order keep adding one more element
+		// until the entire array is gap sorted
+		for (let i = gap; i < n; i += 1) {
+			// add a[i] to the elements that have been gap
+			// sorted save a[i] in temp and make a hole at
+			// position i
+			let temp = arr[i]
 
-      // shift earlier gap-sorted elements up until
-      // the correct location for a[i] is found
-      let j
-      for (j = i; j >= gap && arr[j - gap] > temp; j -= gap)
-        arr[j] = arr[j - gap]
+			// shift earlier gap-sorted elements up until
+			// the correct location for a[i] is found
+			let j
+			for (j = i; j >= gap && arr[j - gap] > temp; j -= gap)
+				arr[j] = arr[j - gap]
 
-      // put temp (the original a[i]) in its correct
-      // location
-      arr[j] = temp
-    }
-  }
-  return 0
+			// put temp (the original a[i]) in its correct
+			// location
+			arr[j] = temp
+		}
+	}
+	return 0
 }
 
 const arr = [12, 11, 13, 5, 6, 7]
 sort(arr)
 console.log(arr)
+
 ```
 
 ### Go
-
 ```go
 // Go program for implementation of Shell Sort
 package main
@@ -279,15 +271,15 @@ func generateSlice(size int) []int {
 	}
 	return slice
 }
-
+ 
 func shellsort(items []int) {
     var (
         n = len(items)
         gaps = []int{1}
         k = 1
-
+     
     )
-
+     
     for {
         gap := element(2, k) + 1
         if gap > n-1 {
@@ -296,7 +288,7 @@ func shellsort(items []int) {
         gaps = append([]int{gap}, gaps...)
         k++
     }
-
+     
     for _, gap := range gaps {
         for i := gap; i < n; i += gap {
             j := i
@@ -309,7 +301,7 @@ func shellsort(items []int) {
         }
     }
 }
-
+ 
 func element(a, b int) int {
     e := 1
     for b > 0 {
@@ -324,7 +316,6 @@ func element(a, b int) int {
 ```
 
 ### Ruby
-
 ```ruby implementation
 
 # Ruby program for implementation of Shell Sort
@@ -367,8 +358,8 @@ class ShellSorter
     a = randomArray(len)
     if(show) then puts "  In: " + a.join(" ") end
     c = sort(a)
-    if(show)
-      puts " Out: " + a.join(" ")
+    if(show) 
+      puts " Out: " + a.join(" ") 
       puts "comp: #{c}"
     end
   end

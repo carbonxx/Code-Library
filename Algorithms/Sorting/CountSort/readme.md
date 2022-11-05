@@ -1,21 +1,19 @@
 # Count Sort
-
 Counting sort is a sorting algorithm that sorts the elements of an array by counting the number of occurrences of each unique element in the array. The count is stored in an auxiliary array and the sorting is done by mapping the count as an index of the auxiliary array.
 
 ## Complexity
-
 | Best   | Average | Worst  | Memory | Stable |
-| ------ | ------- | ------ | ------ | ------ |
+|--------|---------|--------|--------|--------|
 | O(n+k) | O(n+k)  | O(n+k) | O(max) | Yes    |
 
-## Sudo Code
 
+## Sudo Code
 ```
 procedure countingSort(array, size)
   max <- find largest element in array
   initialize count array with all zeros
   for j <- 0 to size
-    find the total count of each unique element and
+    find the total count of each unique element and 
     store the count at jth index in count array
   for i <- 1 to max
     find the cumulative sum and store it in count array itself
@@ -25,16 +23,16 @@ procedure countingSort(array, size)
 end procedure
 ```
 
-## Implementations
 
-- [Python](#python)
-- [C++](#cpp)
-- [C](#c)
-- [Javascript](#javascript)
-- [C#](#C#)
+## Implementations
+* [Python](#python)
+* [C++](#cpp)
+* [C](#c)
+* [Javascript](#javascript)
+* [C#](#C#)
+
 
 ### Python
-
 ```python
 
 # Counting sort in Python programming
@@ -74,7 +72,6 @@ print(data)
 ```
 
 ### CPP
-
 ```cpp
 
 // Counting sort in C++ programming
@@ -140,8 +137,8 @@ int main() {
 }
 ```
 
-### C
 
+### C
 ```c
 
 // Counting sort in C programming
@@ -208,71 +205,69 @@ int main() {
 ```
 
 ### Javascript
-
 ```js
 // Counting sort in Javascript programming
 function countingSort(arr) {
-  let max = -Infinity
+    let max = -Infinity;
 
-  //   max <- find largest element in array
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i]
+    //   max <- find largest element in array
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
     }
-  }
 
-  //   initialize count array with all zeros
-  let count = new Array(max + 1).fill(0)
+    //   initialize count array with all zeros
+    let count = new Array(max + 1).fill(0);
 
-  //   for j <- 0 to size
-  //     find the total count of each unique element and
-  //     store the count at jth index in count array
-  for (let j = 0; j < arr.length; j++) {
-    count[arr[j]]++
-  }
+    //   for j <- 0 to size
+    //     find the total count of each unique element and
+    //     store the count at jth index in count array
+    for (let j = 0; j < arr.length; j++) {
+        count[arr[j]]++;
+    }
 
-  //   for i <- 1 to max
-  //     find the cumulative sum and store it in count array itself
-  for (let i = 1; i < count.length; i++) {
-    count[i] += count[i - 1]
-  }
+    //   for i <- 1 to max
+    //     find the cumulative sum and store it in count array itself
+    for (let i = 1; i < count.length; i++) {
+        count[i] += count[i - 1];
+    }
 
-  let output = new Array(arr.length)
+    let output = new Array(arr.length);
 
-  //   for j <- size down to 1
-  //     restore the elements to array
-  //     decrease count of each element restored by 1
-  for (let j = arr.length - 1; j >= 0; j--) {
-    output[count[arr[j]] - 1] = arr[j]
-    count[arr[j]]--
-  }
+    //   for j <- size down to 1
+    //     restore the elements to array
+    //     decrease count of each element restored by 1
+    for (let j = arr.length - 1; j >= 0; j--) {
+        output[count[arr[j]] - 1] = arr[j];
+        count[arr[j]]--;
+    }
 
-  return output
+    return output;
 }
 
-console.log(countingSort([6, 4, 5, 1, 2, 3, 9, 8, 7])) // [1,2,3,4,5,6,7,8,9]
+console.log(countingSort([6,4,5,1,2,3,9,8,7])); // [1,2,3,4,5,6,7,8,9]
 ```
 
 ###C#
-
 ```C#
 using System;
 using System.Linq;
-public class Counting_sort
-{
- public static void Main()
-    {
+public class Counting_sort  
+{  
+ public static void Main()  
+    {  
 int[] array = new int[10]
 {
     2, 5, -4, 11, 0, 8, 22, 67, 51, 6
 };
-
+ 
     Console.WriteLine("\n"+"Original array :");
-           foreach (int aa in array)
-           Console.Write(aa + " ");
+           foreach (int aa in array)                       
+           Console.Write(aa + " "); 
 
     int[] sortedArray = new int[array.Length];
-
+ 
     // find smallest and largest value
     int minVal = array[0];
     int maxVal = array[0];
@@ -281,34 +276,34 @@ int[] array = new int[10]
         if (array[i] < minVal) minVal = array[i];
         else if (array[i] > maxVal) maxVal = array[i];
     }
-
+ 
     // init array of frequencies
     int[] counts = new int[maxVal - minVal + 1];
-
+ 
     // init the frequencies
     for (int i = 0; i < array.Length; i++)
     {
         counts[array[i] - minVal]++;
     }
-
+ 
     // recalculate
     counts[0]--;
     for (int i = 1; i < counts.Length; i++)
     {
         counts[i] = counts[i] + counts[i - 1];
     }
-
+ 
     // Sort the array
     for (int i = array.Length - 1; i >= 0; i--)
     {
         sortedArray[counts[array[i] - minVal]--] = array[i];
     }
-
+ 
   Console.WriteLine("\n"+"Sorted array :");
-           foreach (int aa in sortedArray)
-           Console.Write(aa + " ");
-  Console.Write("\n");
-
+           foreach (int aa in sortedArray)                       
+           Console.Write(aa + " "); 
+  Console.Write("\n");            
+                   
 }
 }
 ```
