@@ -18,7 +18,7 @@
 - [Software Engineering](#software-engineering)
 - [Integrated Circuits](#integrated-circuits)
 - [Object Oriented Programming](#object-oriented-programming)
-- [API Basics](#api-basics)
+- [API (Application Programming Interface)](#api-application-programming-interface)
 - [Operating Systems](#operating-systems)
 - [Memory and Storage](#memory-and-storage)
 - [File System](#file-system)
