@@ -211,7 +211,7 @@ It is the standard way of code that every programmer has to abide by for better 
 
 Read more about these concepts of OOP [here](Object%20Oriented%20Programming/readme.md)
 
-## [API Basics](API/readme.md)
+## [API (Application Programming Interface)](API/readme.md)
 
 APIs (Application Programming Interfaces) allow different software systems to communicate with each other. They are commonly used to connect frontend applications with backend servers.
 
