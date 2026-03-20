@@ -18,6 +18,7 @@
 - [Software Engineering](#software-engineering)
 - [Integrated Circuits](#integrated-circuits)
 - [Object Oriented Programming](#object-oriented-programming)
+- [API (Application Programming Interface)](#api-application-programming-interface)
 - [Operating Systems](#operating-systems)
 - [Memory and Storage](#memory-and-storage)
 - [File System](#file-system)
@@ -209,6 +210,12 @@ It is the standard way of code that every programmer has to abide by for better 
 - Polymorphism
 
 Read more about these concepts of OOP [here](Object%20Oriented%20Programming/readme.md)
+
+## [API (Application Programming Interface)](API/readme.md)
+
+APIs (Application Programming Interfaces) allow different software systems to communicate with each other. They are commonly used to connect frontend applications with backend servers.
+
+Read more about API basics [here](API/readme.md)
 
 ## [Data Structures](Data%20Structures/readme.md)
 
