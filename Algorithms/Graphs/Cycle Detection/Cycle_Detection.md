@@ -6,7 +6,7 @@ A cycle is a path of length greater than 2 that starts and ends at the same vert
 * Self Loop
 * Multiple Edges
 
-## [Undirected Graph](Undirected%20Graph/readme.md)
-* [DFS](Undirected%20Graph/DFS/readme.md)
-* [BFS](Undirected%20Graph/BFS/readme.md)
+## [Undirected Graph](Undirected Graph/Undirected_Graph.md)
+* [DFS](Undirected Graph/DFS/DFS.md)
+* [BFS](Undirected Graph/BFS/BFS.md)
 

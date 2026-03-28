@@ -4,5 +4,5 @@ Searching is algorithm for finding a certain target element inside a container.
 Searching Algorithms are designed to check for an element or retrieve an element from any data structure where it is stored.
 
 ## Searching Algorithms
-* [Linear Search](LinearSearch/readme.md)
-* [Binary Search](BinarySearch/readme.md)
+* [Linear Search](LinearSearch/LinearSearch.md)
+* [Binary Search](BinarySearch/BinarySearch.md)

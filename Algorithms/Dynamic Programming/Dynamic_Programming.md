@@ -22,12 +22,12 @@ Dynamic Programming algorithm is designed using the following four steps −
 
 
 ### Popular Dynamic Programming Algorithms
-* [Fibonacci Sequence](Fibonacci%20Sequence/README.md)
-* [Longest Common Subsequence](Longest%20Common%20Subsequence/README.md)
+* [Fibonacci Sequence](Fibonacci Sequence/Fibonacci_Sequence.md)
+* [Longest Common Subsequence](Longest Common Subsequence/Longest_Common_Subsequence.md)
 * [Longest Increasing Subsequence](Not-Added)
 * [Knapsack Problem](Not-Added)
 * [Edit Distance](Not-Added)
-* [Coin Change](Coin%20Change/README.md)
+* [Coin Change](Coin Change/Coin_Change.md)
 * [Matrix Chain Multiplication](Not-Added)
 
 

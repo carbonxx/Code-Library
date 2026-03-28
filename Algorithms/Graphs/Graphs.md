@@ -100,13 +100,13 @@ int main()
 Pic Will be added
 
 ## Graph Topics
-1. [Graph Traversal](Traversal%20Algorithms/readme.md)
-    - [Breadth First Search](Traversal%20Algorithms/BreadthFirstSearch/readme.md)
-    - [Depth First Search](Traversal%20Algorithms/DepthFirstSearch/readme.md)]
-2. [Cycle Detection](Cycle%20Detection/readme.md)
-    - [Undirected Graph](Cycle%20Detection/Undirected%20Graph/readme.md)
-        - [DFS](Cycle%20Detection/Undirected%20Graph/DFS/readme.md)
-        - [BFS](Cycle%20Detection/Undirected%20Graph/BFS/readme.md)
+1. [Graph Traversal](Traversal Algorithms/Traversal_Algorithms.md)
+    - [Breadth First Search](Traversal Algorithms/BreadthFirstSearch/BreadthFirstSearch.md)
+    - [Depth First Search](Traversal Algorithms/DepthFirstSearch/DepthFirstSearch.md)]
+2. [Cycle Detection](Cycle Detection/Cycle_Detection.md)
+    - [Undirected Graph](Cycle Detection/Undirected Graph/Undirected_Graph.md)
+        - [DFS](Cycle Detection/Undirected Graph/DFS/DFS.md)
+        - [BFS](Cycle Detection/Undirected Graph/BFS/BFS.md)
     - [Directed Graph](notadded)
         - [DFS](notadded)
         - [BFS](notadded)

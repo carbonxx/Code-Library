@@ -6,5 +6,5 @@ Backtracking is an algorithmic-technique for solving problems recursively by try
 ## Some Popular Backtracking Algorithm
 
 
-* [Rat in a Maze](Rat%20in%20a%20Maze/README.md)
-* [The Knight’s tour problem](The%20Knight’s%20tour%20problem/README.md)
+* [Rat in a Maze](Rat in a Maze/Rat_in_a_Maze.md)
+* [The Knight’s tour problem](The Knight’s tour problem/The_Knight%E2%80%99s_tour_problem.md)
